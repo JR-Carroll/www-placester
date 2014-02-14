@@ -1,6 +1,6 @@
 require([
   "dojo/dom", "dojo/fx", "dojox/gfx", "dojo/_base/array", "dojo/window", "dojo/dom-style", 
-  "dojox/gfx/Moveable", "dojo/json", "dojo/_base/xhr", "dojo/request/script", "dojo/request/xhr", "dojo/domReady!"],
+  "dojox/gfx/Moveable", "dojo/json", "dojo/_base/xhr", "dojo/request", "dojo/request/xhr", "dojo/domReady!"],
 
   function (dom, fx, gfx, array, win, domStyle, move, JSON, xhr, request, rxhr) {
   	console.log("Yay this is working");
@@ -65,15 +65,9 @@ require([
   	}
 
   	function start() {
-    	// request.get(URL, {
-     //      handleAs: 'json',
-     //      headers: { 'Access-Control-Allow-Origin': "*"}
-     //    }).then(_parseListing)
-      data = rxhr(URL, {
-        handleAs: "json"
-      })
-
-      console.log(data);
+    	request(URL, {
+          handleAs: 'json'
+        }).then(_parseListing)
   	} 
 
     // Kick-off the application.
