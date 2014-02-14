@@ -3,11 +3,11 @@ require([
   "dojox/gfx/Moveable", "dojo/json", "dojo/_base/xhr", "dojo/request", "dojo/request/xhr", "dojo/domReady!"],
 
   function (dom, fx, gfx, array, win, domStyle, move, JSON, xhr, request, rxhr) {
-  	console.log("Yay this is working");
-    URL = "http://jrcresearch.net/placester/listings.json"
-
+    // Where the listings are stored
+    __URL__ = "http://jrcresearch.net/placester/listings.json"
+    var _storedJSON = null;
     // Create the surface to which we make it rain on... makin' it rain! UHH! Yeah!
-    var surface = gfx.createSurface(dom.byId("mainCanvas"));
+    this.surface = gfx.createSurface('mainCanvas', "100%", "100%");
 
   	function makeItRain() {
   		//pass
@@ -53,11 +53,39 @@ require([
   		//pass
   	}
 
+    function _makeMoveable(x, y, width, height, img) {
+      group = this.surface.createGroup();
+
+      group.createImage({
+              x: _randX || 100, 
+              y: _randY || 100, 
+              width: width || 100, 
+              height: height || 100, 
+              src: img});
+
+      new move(group);
+    }
+
   	function _parseListing(json) {
-  		//pass
-      // console.log(json);
-      console.log("at least this hit");
-      console.log(json);
+      var _storedJSON = json;
+
+      for (i = json.count - 1; i >= 0; i--) {
+        _currentListing = json.listings[i];
+        console.log(_currentListing);
+        _randX = Math.random()*300; 
+        _randY = Math.random()*300;
+        
+        try {
+          _imageSRC = _currentListing.images[0].url;
+        }
+        catch(err){
+          _imageSRC = null;
+        }
+
+        if (_imageSRC != null) {
+          _makeMoveable(_randX, _randY, null, null, img=_imageSRC)
+        }
+      };
   	}
 
   	function _sortResultsBasedOnQueue() {
@@ -65,7 +93,7 @@ require([
   	}
 
   	function start() {
-    	request(URL, {
+    	request(__URL__, {
           handleAs: 'json'
         }).then(_parseListing)
   	} 
