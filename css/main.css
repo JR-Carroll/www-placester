@@ -23,8 +23,8 @@ textarea {
 html, body {
     font-size: 1em;
     line-height: 1.4;
+    height: 50em;
     width: 100%;
-    height: 100%;
 }
 
 /*
@@ -118,26 +118,207 @@ textarea {
     font-size: 3em;
     background-color: #2D608F;
 }
+
 .canvasBkgrnd {
-    background-color: #000;
+    position: relative;
+    /* CSS */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJibGFjayIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJibGFjayIgLz48cmVjdCB4PSItOC4yNTY1JSIgeT0iLTQ3LjQyOSUiIHdpZHRoPSIxMTYuNTEzMSUiIGhlaWdodD0iMTk0Ljg1ODElIiBmaWxsPSJ1cmwoI2cpIiAvPjwvc3ZnPg==);
+    background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 283, color-stop(0%, #ffffff), color-stop(100%, black));
+    background-image: -webkit-radial-gradient(center center, farthest-corner circle, #ffffff 0%, black 100%);
+    background-image: -moz-radial-gradient(center center, farthest-corner circle, #ffffff 0%, black 100%);
+    background-image: -ms-radial-gradient(center center, farthest-corner circle, #ffffff 0%, black 100%);
+    background-image: -o-radial-gradient(center center, farthest-corner circle, #ffffff 0%, black 100%);
+    background-image: radial-gradient(farthest-corner circle at center center, #ffffff 0%, black 100%);
     width: 75%;
-    height: 75%;
-    margin: 3em auto;
+    height: 81%;
+    margin: 2em auto 0 auto;
 }
 
+.photoBox {
+    display: inline-block;
+    background-color: #8E8E8E;
+    border: solid #4E4E4E .2em;
+    min-width: 100px;
+    min-height: 100px;
+    color: #fff; /*white text*/
+    font-size: 2em;
+    text-align: center;
+    margin: auto auto;
+}
 
+.photoContainer {
+    position: absolute;
+    background-color: #8E8E8E;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
 
+.PropertyCard {
+    margin: 1em;
+    height: 12.6em;
+}
 
+.property, .PropertyCard {
+    color: #2D608F;
+    background-color: #CACACA;
+    border: solid #4C4C4C;
+    /*display: table-cell;*/
+}
 
+.cardImg {
+    display: inline-block;
+    background-image: url("../img/noimage.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-width: 175px;
+    height: 175px;
+    float: left;
+}
 
+.address {
+    display: inline-block;
+    color: black;
+    font-weight: 800;
+}
 
+.priceTag {
+    display: inline;
+    font-size: 1.1em;
+    color: #fff;
+    padding: 0;
+    top: 0;
+    float: right;
+    padding: 5px;
+}
 
+.cardInfo {
+    width: 100%;
+}
 
+.allInfo {
+    text-align: center;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-bottom: 0.15em;
+    padding-top: 0.15em;
+    color: white;
+    background-color: #2D608F;
+}
 
+.pagination {
+    margin: 1em auto;
+    width: 50%;
+    height: 2em;
+    text-align: center;
+    position: relative;
+}
 
+.page {
+    display: inline-block;
+    background-image: url("../img/raindrop.png");
+    background-size: 100% 100%;
+    color: #000;
+    width: 20px;
+    height: 20px;
+    font-weight: 800;
+}
 
+.saleOrRent {
+    display: inline-block;
+    background-image: url("../img/rent.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    height: 140px;
 
+}
 
+.mapTxt {
+    font-size: .7em;
+}
+
+.cardImgMenu {
+    position: relative;
+    width: 101%;
+    background-color: #0F0047;
+    height: 32px;
+    bottom: 0px;
+    left: -2px;
+}
+
+.contactBtn {
+    display: inline-block;
+    background-image: url("../img/contact.png");
+    background-position: -3px -3px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 23%;
+    height: 40px;
+    padding: 0;
+}
+
+.mapBtn {
+    display: inline-block;
+    background-image: url("../img/mapicon.png");
+    background-position: -3px 0px;
+    background-size: 78% 78%;
+    background-repeat: no-repeat;
+    width: 23%;
+    height: 40px;
+    padding: 0;
+}
+
+.detailsCol1, .detailsCol2 {
+    display: inline-block;
+    font-size: .9em;
+}
+
+.preferred {
+    display: inline-block;
+    background-image: url("../img/star.png");
+    background-size: 100% 100%;
+    color: #000;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+}
+
+.address, .cardInfoSpec {
+    padding-left: 0.5em;
+}
+
+.subsetProperties {
+    width: 57%;
+    margin: auto;
+    height: 100%;
+}
+
+#page_1 {
+    margin-left: 28px;
+}
+
+.dijitDialogTitleBar {
+    background-color: #0F0047;
+    color: white;
+}
+
+.dijitDialogCloseIcon {
+    float: right;
+    padding: 0 0.3em;
+    border: solid white 1px;
+    background-color: white;
+    color: black;
+}
+
+.dijitDialogPaneContent {
+    background-color: #fff;
+    color: #0F0047;
+    font-size: 2em;
+}
 
 /* ==========================================================================
    Helper classes

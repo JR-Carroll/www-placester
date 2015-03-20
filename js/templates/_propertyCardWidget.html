@@ -1,0 +1,32 @@
+<div class="${baseClass}" id="property1" data-dojo-attach-point="pCard">
+    <div class="allInfo" id="allInfo1" data-dojo-attach-point="moreInfo">Click for More Info</div>
+    <div class="cardImg" id="${!imgID}" data-dojo-attach-point="cardImage">
+        <div class="saleOrRent" id="saleOrRent1" data-dojo-attach-point="saleRent"></div>
+        <div class="cardImgMenu" id="cardImgMenu1">
+            <div class="contactBtn" id="contactBtn1" data-dojo-attach-point="contactButton"></div>
+            <div class="mapBtn" id="mapBtn1" data-dojo-attach-point="mapButton"></div>
+            <div class="priceTag" id="priceTag1"><span data-dojo-attach-point="_price">${!price}</span></div>
+        </div>
+    </div>
+    <div class="cardInfo" id="cardInfo1">
+        <div class="address" id="cardAddress1">
+            <span data-dojo-attach-point="_address">${!address}</span> <span class="mapTxt" id="mapTxt1" data-dojo-attach-point="mapText">[map]</span>
+            <div class="neighboorhood" id="cardNeighborhood1">Near: <span data-dojo-attach-point="_neighborhood">${!neighborhood}</span></div>
+        </div>
+        <div class="cardInfoSpec" id="cardInfoSpec1">
+            <ul class="detailsCol1" id="detailsCol1Spot1">
+                <li>Sq-Feet: <span data-dojo-attach-point="_sqft">${!sqft}</span></li>
+                <li>Floors:  <span data-dojo-attach-point="_floors">${!floors}</span></li>
+                <li>Bedrooms: <span data-dojo-attach-point="_rooms">${!rooms}</span></li>
+                <li>Full Baths: <span data-dojo-attach-point="_fbaths">${!fbaths}</span></li>
+                <li>Half Baths: <span data-dojo-attach-point="_hbaths">${!hbaths}</span></li>
+            </ul>
+            <ul class="detailsCol2" id="detailsCol2Spot1">
+                <li>AC:  <span data-dojo-attach-point="_ac">${!ac}</span></li>
+                <li>Yard: <span data-dojo-attach-point="_yard">${!yard}</span></li>
+                <li>Pool:  <span data-dojo-attach-point="_pool">${!pool}</span></li>
+                <li>Washer:  <span data-dojo-attach-point="_washer">${!washer}</span></li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=1200, initial-scale=.5">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -22,9 +22,9 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <script type="text/javascript" data-dojo-config="parseOnLoad:false, async:1" src="http://ajax.googleapis.com/ajax/libs/dojo/1.8.3/dojo/dojo.js"></script>
+        <script type="text/javascript" data-dojo-config="parseOnLoad:false, async:1, isDebug: true" src="http://ajax.googleapis.com/ajax/libs/dojo/1.8.3/dojo/dojo.js"></script>
         <div class="title">Make it Rain</div> 
-        <div class="subcap">...a Placester WebApp brought to you by J. R. Carroll, 2014</div>
+        <div class="subcap">...a WebApp brought to you by J. R. Carroll, 2014</div>
         <div id="mainCanvas" class="canvasBkgrnd">
             <div class="startButton">Start</div>
             <noscript id="advisement">
@@ -33,7 +33,21 @@
                 Like 10 years ago...  you really need to stop being so paranoid or antiquated.
                 Please, reload the page with JavaScript enabled!
             </noscript>
+            <div class="photoContainer">
+                <div class="photoBox" id="spot1">1</div>
+                <div class="photoBox" id="spot2">2</div>
+                <div class="photoBox" id="spot3">3</div>
+                <div class="photoBox" id="spot4">4</div>
+                <div class="photoBox" id="spot5">5</div>
+                <div class="photoBox" id="spot6">6</div>
+            </div>
         </div>
+            <div class="pagination" id="pagination">
+                Page:
+                <div class="preferred" id="preferred"></div>
+            </div>  
+        </div>
+        <div class="subsetProperties" id="sortedProperties" name="page_1"></div>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>
